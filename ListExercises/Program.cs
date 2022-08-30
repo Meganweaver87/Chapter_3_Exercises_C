@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 namespace ListExercises
 {
@@ -9,9 +10,14 @@ namespace ListExercises
         static void Main (string[] args)
         {
             List<string> wordList = new List<string> { "Green", "Eggs", "And", "Ham" };
+            string eggsAndHamSentence = "I would not, could not, in a box. I would not, could not with a fox.\r\nI will not eat them in a house. I will not eat them with a mouse.";
+            List<string> eggsAndHamList = new List<string>();
+            eggsAndHamList = eggsAndHamSentence.Split(" ").ToList();
+
             List<int> numList = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             int numTotal = evenNumbers(numList);
             wordsSelected(wordList);
+            wordsSelected(eggsAndHamList);
 
         }
         static void wordsSelected(List<string> wordList)
