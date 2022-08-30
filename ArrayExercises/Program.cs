@@ -6,7 +6,16 @@ namespace ArrayExercises
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Arrays!");
+            int[] numberArray = new int[6] { 1, 1, 2, 3, 5, 8 };
+            foreach(int num in numberArray)
+            {
+                if (num % 2 != 0)
+                {
+                    Console.WriteLine(num);
+                }
+                
+            }
+            
         }
     }
 }
